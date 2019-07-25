@@ -25,4 +25,4 @@ ENV USE_NO_CACHE 1
 EXPOSE 3306
 
 ENTRYPOINT ["/entrypoint.bash"]
-CMD ["/usr/local/bin/mysql-proxy", "--plugins=proxy", "--defaults-file=/etc/mp.conf", "-s", "/etc/debug.lua"]
+CMD ["stdbuf", "-oL", "-eL", "/usr/local/bin/mysql-proxy", "--plugins=proxy", "--defaults-file=/etc/mp.conf", "-s", "/etc/debug.lua"]
