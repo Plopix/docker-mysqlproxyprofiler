@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM debian:strech
 MAINTAINER Plopix
 
 RUN apt-get update -q -y && apt-get install -q -y --force-yes --no-install-recommends build-essential flex \
